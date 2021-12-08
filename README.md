@@ -1,6 +1,6 @@
 # Github Changelog
 
-A Cloudflare Worker that created a formatted changelog from a Github release webhook
+A Cloudflare Worker webhook bridge for posting formatted Github release notifications in Discord
 
 ## Install
 
