@@ -1,0 +1,16 @@
+{
+    "name": "github-changelog",
+    "private": true,
+    "version": "1.0.0",
+    "description": "A Cloudflare Worker that created a formatted changelog from a Github release webhook",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write '**/*.{js,css,json,md}'"
+    },
+    "author": "Anima <18208134+animafps@users.noreply.github.com>",
+    "license": "GPL-3.0-or-later",
+    "devDependencies": {
+        "prettier": "^1.17.0"
+    }
+}
