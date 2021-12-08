@@ -1,7 +1,5 @@
 name = "github-changelog"
 type = "webpack"
-
-account_id = "1d4cf1294df33e0483fffa84550d3052"
 workers_dev = true
 compatibility_date = "2021-12-08"
 

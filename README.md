@@ -10,6 +10,9 @@ You can use [wrangler](https://github.com/cloudflare/wrangler) to generate a new
 wrangler generate myapp https://github.com/animafps/github-release
 ```
 
+Or click:
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/animafps/github-changelog)
+
 Then add the Discord webhook url into the environment variables under `DISCORD_URL`
 
 Next when linking to Github add `/github` to the end of your worker's url
