@@ -4,7 +4,7 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request) {
     const url = new URL(request.url)
-    if (url.pathname !== '/github' || request.method !== 'POST') {
+    if (request.method !== 'POST') {
         return new Response('Not found', { status: 404 })
     }
     const requestBody = await request.json()
