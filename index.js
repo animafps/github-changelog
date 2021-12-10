@@ -30,11 +30,6 @@ async function handleRequest(request) {
 
 function parseBody(body) {
     const fields = []
-    body.split('### ')
-        .shift()
-        .forEach(val => {
-            const split = val.split('\n\n')
-            fields.push({ name: split[0], value: split[1] })
-        })
+    body.split('### ').shift()
     return fields
 }
