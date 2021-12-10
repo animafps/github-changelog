@@ -23,12 +23,17 @@ async function handleRequest(request) {
                 },
             ],
         }),
-    })
+    }).then(response => console.log(response))
 
     return new Response('OK')
 }
 
 function parseBody(body) {
-    const splitHeaders = body.split('### ').shift()
-    return splitHeaders
+    return body
+        .split('### ')
+        .shift()
+        .map(val => {
+            const split = val.split('\n\n')
+            return { name: split[0], value: split[1] }
+        })
 }
