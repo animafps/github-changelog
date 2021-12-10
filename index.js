@@ -29,11 +29,12 @@ async function handleRequest(request) {
 }
 
 function parseBody(body) {
-    return body
-        .split('### ')
+    const fields = []
+    body.split('### ')
         .shift()
-        .map(val => {
+        .forEach(val => {
             const split = val.split('\n\n')
-            return { name: split[0], value: split[1] }
+            fields.push({ name: split[0], value: split[1] })
         })
+    return fields
 }
