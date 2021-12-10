@@ -19,11 +19,11 @@ async function handleRequest(request) {
                     title: requestBody.release.tag_name,
                     url: requestBody.release.html_url,
                     timestamp: requestBody.release.published_at,
-                    description: `${parseBody(requestBody.release.body)}`,
+                    description: typeof parseBody(requestBody.release.body),
                 },
             ],
         }),
-    }).then(response => console.log(response))
+    })
 
     return new Response('OK')
 }
