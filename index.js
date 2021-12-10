@@ -19,7 +19,7 @@ async function handleRequest(request) {
                     title: requestBody.release.tag_name,
                     url: requestBody.release.html_url,
                     timestamp: requestBody.release.published_at,
-                    fields: parseBody(requestBody.release.body),
+                    description: `${parseBody(requestBody.release.body)}`,
                 },
             ],
         }),
