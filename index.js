@@ -30,8 +30,5 @@ async function handleRequest(request) {
 
 function parseBody(body) {
     const splitHeaders = body.split('### ').shift()
-    return splitHeaders.map(val => {
-        const split = val.split('\n\n')
-        return { name: split[0], value: split[1] }
-    })
+    return splitHeaders
 }
