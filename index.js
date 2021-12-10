@@ -19,17 +19,11 @@ async function handleRequest(request) {
                     title: requestBody.release.tag_name,
                     url: requestBody.release.html_url,
                     timestamp: requestBody.release.published_at,
-                    description: parseBody(requestBody.release.body)[0],
+                    description: requestBody.release.body,
                 },
             ],
         }),
     })
 
     return new Response('OK')
-}
-
-function parseBody(body) {
-    const fields = []
-    body.split('### ').shift()
-    return fields
 }
